@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Arial,sans-serif;}
+:root{--bg:#0a1120;--bg2:#0e1830;--card:#111e38;--card2:#16264a;--line:#22345c;--ink:#e8eefc;--mut:#8aa0c8;--gold:#e2b857;--teal:#2dd4bf;--blue:#5b8bf0;--red:#f87171;--green:#34d399;--violet:#a78bfa;}
+body{background:radial-gradient(1200px 700px at 80% -10%,#16264a 0%,var(--bg) 60%);color:var(--ink);width:1920px;}
+.wrap{padding:26px 30px 30px;}
+/* HEADER */
+.hd{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:20px;}
+.hd .l{display:flex;align-items:center;gap:16px;}
+.logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#b98a2e);display:flex;align-items:center;justify-content:center;font-size:24px;}
+.ttl{font-size:23px;font-weight:800;letter-spacing:.3px;}
+.ttl b{color:var(--gold);}
+.sub{font-size:12px;color:var(--mut);letter-spacing:2px;text-transform:uppercase;margin-top:2px;}
+.hd .r{display:flex;align-items:center;gap:18px;}
+.pill{font-size:12px;font-weight:700;padding:6px 13px;border-radius:30px;letter-spacing:.5px;}
+.live{background:rgba(52,211,153,.15);color:var(--green);border:1px solid rgba(52,211,153,.4);}
+.demo{background:rgba(226,184,87,.14);color:var(--gold);border:1px solid rgba(226,184,87,.4);}
+.clk{font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;color:#fff;letter-spacing:1px;}
+.nav{display:flex;gap:8px;}
+.tab{font-size:13px;font-weight:600;color:var(--mut);padding:7px 15px;border-radius:9px;background:var(--card);border:1px solid var(--line);}
+.tab.on{color:#fff;background:var(--card2);border-color:var(--gold);}
+/* KPI ROW */
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px;}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 18px;position:relative;overflow:hidden;}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent,var(--gold));}
+.kpi .v{font-size:34px;font-weight:900;color:#fff;line-height:1;}
+.kpi .k{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.8px;margin-top:7px;}
+.kpi .d{font-size:11px;color:var(--green);margin-top:4px;font-weight:600;}
+/* GRID */
+.cols{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.ph{display:flex;align-items:center;justify-content:space-between;padding:13px 17px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(226,184,87,.08),transparent);}
+.ph .t{font-size:14px;font-weight:800;letter-spacing:.3px;display:flex;align-items:center;gap:8px;}
+.ph .badge{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;}
+.tblhd,.row{display:grid;align-items:center;padding:9px 17px;font-size:13px;}
+.tblhd{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.7px;border-bottom:1px solid var(--line);}
+.row{border-bottom:1px solid rgba(34,52,92,.5);}
+.row:nth-child(even){background:rgba(255,255,255,.014);}
+.cell-strong{font-weight:700;color:#fff;}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;}
+.t-com{background:rgba(91,139,240,.16);color:var(--blue);}
+.t-resto{background:rgba(249,115,22,.16);color:#fb923c;}
+.t-form{background:rgba(45,212,191,.14);color:var(--teal);}
+.comm{display:inline-flex;align-items:center;gap:6px;}
+.av{width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#0a1120;}
+.dim{color:var(--mut);}
+/* battle */
+.battle{padding:8px 17px 14px;}
+.brow{display:grid;grid-template-columns:120px 1fr 54px;align-items:center;gap:12px;padding:8px 0;}
+.bar{height:13px;border-radius:7px;background:rgba(255,255,255,.06);overflow:hidden;}
+.bar i{display:block;height:100%;border-radius:7px;background:linear-gradient(90deg,var(--gold),#f1cf7e);}
+.bnum{text-align:right;font-weight:800;color:#fff;font-size:15px;}
+/* objectives */
+.obj{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:14px 17px;}
+.gauge{background:var(--card2);border:1px solid var(--line);border-radius:11px;padding:12px;text-align:center;}
+.gauge .nm{font-size:12px;color:var(--mut);}
+.gauge .pc{font-size:24px;font-weight:900;color:#fff;margin:4px 0;}
+.gbar{height:7px;border-radius:5px;background:rgba(255,255,255,.07);overflow:hidden;}
+.gbar i{display:block;height:100%;}
+.foot{margin-top:14px;font-size:11px;color:var(--mut);display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;}
+/* MATCHING */
+.match-intro{background:linear-gradient(120deg,rgba(45,212,191,.1),rgba(91,139,240,.06));border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:18px;}
+.match-intro h2{font-size:19px;font-weight:800;}
+.match-intro h2 b{color:var(--teal);}
+.match-intro p{font-size:14px;color:var(--mut);margin-top:6px;line-height:1.5;max-width:1500px;}
+.mcards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.mcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0;overflow:hidden;}
+.mtop{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:8px;padding:16px 18px;}
+.side .lbl{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:.7px;margin-bottom:5px;}
+.side .nm{font-size:16px;font-weight:800;color:#fff;}
+.side .meta{font-size:12px;color:var(--mut);margin-top:3px;line-height:1.4;}
+.side.ent{text-align:left;}
+.side.stu{text-align:right;}
+.link{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.score{width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:19px;font-weight:900;color:#0a1120;}
+.score.hi{background:conic-gradient(var(--green) 320deg,#1c2c44 0);}
+.score.md{background:conic-gradient(var(--gold) 290deg,#1c2c44 0);}
+.score span{background:#0a1120;color:#fff;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.mwhy{border-top:1px solid var(--line);padding:12px 18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;}
+.why{font-size:11.5px;font-weight:600;padding:5px 10px;border-radius:20px;background:rgba(52,211,153,.12);color:var(--green);}
+.why.tr{background:rgba(91,139,240,.14);color:var(--blue);}
+.arrow{font-size:22px;color:var(--gold);text-align:center;}
+.hide{display:none;}
+</style></head>
+<body>
+<div class="wrap">
+
+  <div class="hd">
+    <div class="l">
+      <div class="logo">💎</div>
+      <div>
+        <div class="ttl">CFA — <b>SALES INTELLIGENCE</b></div>
+        <div class="sub">Directeur Commercial · Tableau de bord IA</div>
+      </div>
+    </div>
+    <div class="r">
+      <div class="nav">
+        <div class="tab on" id="tab-live">▦ LIVE</div>
+        <div class="tab" id="tab-match">🤝 MATCHING IA</div>
+      </div>
+      <span class="pill demo">● DÉMO · DONNÉES FICTIVES</span>
+      <span class="pill live">● LIVE</span>
+      <div class="clk" id="clk">10:42:18</div>
+    </div>
+  </div>
+
+  <!-- ===================== VUE LIVE ===================== -->
+  <div id="view-live">
+    <div class="kpis">
+      <div class="kpi" style="--accent:var(--blue)"><div class="v">24</div><div class="k">Entreprises · besoin</div><div class="d">▲ +5 cette semaine</div></div>
+      <div class="kpi" style="--accent:var(--violet)"><div class="v">38</div><div class="k">Étudiants en recherche</div><div class="d">▲ +9</div></div>
+      <div class="kpi" style="--accent:var(--green)"><div class="v">11</div><div class="k">Placés ce mois</div><div class="d">▲ objectif 10 ✓</div></div>
+      <div class="kpi" style="--accent:var(--gold)"><div class="v">24%</div><div class="k">Taux de conversion</div><div class="d">▲ +3 pts</div></div>
+      <div class="kpi" style="--accent:var(--teal)"><div class="v">142</div><div class="k">Appels aujourd'hui</div><div class="d">● activité intense</div></div>
+    </div>
+
+    <div class="cols">
+      <!-- COL GAUCHE -->
+      <div>
+        <div class="panel">
+          <div class="ph"><div class="t">🏢 ENTREPRISES · BESOIN</div><div class="badge">Pipeline · défilement auto</div></div>
+          <div class="tblhd" style="grid-template-columns:26% 16% 14% 16% 16% 12%;">
+            <span>Société</span><span>Commercial</span><span>Ville</span><span>Secteur</span><span>Formation</span><span>Postes</span>
+          </div>
+          <div id="ent-rows"></div>
+        </div>
+
+        <div class="panel">
+          <div class="ph"><div class="t">⚡ ÉTUDIANTS · EN RECHERCHE</div><div class="badge">Prêts à placer</div></div>
+          <div class="tblhd" style="grid-template-columns:24% 8% 24% 20% 24%;">
+            <span>Candidat</span><span>Âge</span><span>Formation</span><span>Ville</span><span>Stage / RDV</span>
+          </div>
+          <div id="stu-rows"></div>
+        </div>
+      </div>
+
+      <!-- COL DROITE -->
+      <div>
+        <div class="panel">
+          <div class="ph"><div class="t">📞 ACTIVITÉ PAR COMMERCIAL — AUJOURD'HUI</div><div class="badge">Remise à zéro chaque matin</div></div>
+          <div class="battle" id="battle"></div>
+        </div>
+
+        <div class="panel">
+          <div class="ph"><div class="t">🎯 OBJECTIFS DU MOIS</div><div class="badge">Signatures · Mars 2026</div></div>
+          <div class="obj" id="obj"></div>
+        </div>
+      </div>
+    </div>
+    <div class="foot"><span>Cockpit Sales Intelligence · conçu &amp; développé en interne</span><span>Actualisation automatique toutes les 30 s</span></div>
+  </div>
+
+  <!-- ===================== VUE MATCHING ===================== -->
+  <div id="view-match" class="hide">
+    <div class="match-intro">
+      <h2>🤝 MATCHING IA — <b>l'algorithme qui place les apprentis tout seul</b></h2>
+      <p>Pour chaque entreprise qui a un besoin, l'IA cherche l'étudiant le plus compatible et calcule un <b>score</b> à partir de 4 critères : <b>formation</b> alignée sur le poste, <b>temps de trajet réel</b> (transports en commun), <b>âge / profil</b> recherché et <b>disponibilité</b>. Le commercial n'a plus qu'à confirmer le rapprochement le mieux noté.</p>
+    </div>
+    <div class="mcards" id="mcards"></div>
+    <div class="foot"><span>Chaque carte = 1 entreprise rapprochée de son meilleur candidat, avec la justification du score</span><span>Données fictives</span></div>
+  </div>
+
+</div>
+
+<script>
+const AVC=['#e2b857','#5b8bf0','#34d399','#a78bfa','#2dd4bf','#fb923c'];
+const sn=s=>s.split(' ')[0];
+function avatar(name,i){return `<span class="av" style="background:${AVC[i%AVC.length]}">${name[0]}</span>`;}
+const COMS=['Lucas M.','Sarah B.','Karim D.','Léa F.','Nadia R.','Hugo P.'];
+function commCell(name){const i=COMS.indexOf(name);return `<span class="comm">${avatar(name,i<0?0:i)}<span style="font-weight:600">${name}</span></span>`;}
+
+// ENTREPRISES
+const ENT=[
+ ['Maison Lefort','Lucas M.','Paris 11','t-com','Commerce','2'],
+ ['Burger Avenue','Karim D.','Créteil','t-resto','Restauration','3'],
+ ['Boutique Émeraude','Sarah B.','Boulogne','t-com','Vente','1'],
+ ['Le Comptoir Doré','Léa F.','Vincennes','t-resto','Restauration','2'],
+ ['Optic Vision','Nadia R.','Nanterre','t-com','Commerce','1'],
+ ['Sushi Kané','Hugo P.','Paris 15','t-resto','Restauration','2'],
+ ['Concept Mobile','Lucas M.','Montreuil','t-com','Vente','2'],
+ ['Pâtisserie Lenôtre','Sarah B.','Levallois','t-resto','Restauration','1'],
+];
+document.getElementById('ent-rows').innerHTML=ENT.map(r=>`
+ <div class="row" style="grid-template-columns:26% 16% 14% 16% 16% 12%;">
+   <span class="cell-strong">${r[0]}</span>
+   <span>${commCell(r[1])}</span>
+   <span class="dim">${r[2]}</span>
+   <span><span class="tag ${r[3]}">${r[4]}</span></span>
+   <span class="dim">${r[4]}</span>
+   <span class="cell-strong" style="text-align:center">${r[5]}</span>
+ </div>`).join('');
+
+// ETUDIANTS
+const STU=[
+ ['Aminata D.','19','Commerce (BAC)','Paris 20','RDV jeudi 14h'],
+ ['Yanis K.','21','Vente (BTS)','Créteil','Stage en cours'],
+ ['Sofia M.','18','Restauration (CAP)','Boulogne','Dispo immédiate'],
+ ['Ethan R.','20','Commerce (BAC)','Vincennes','RDV lundi 10h'],
+ ['Inès B.','22','Vente (BTS)','Nanterre','Dispo immédiate'],
+ ['Noah L.','19','Restauration (CAP)','Paris 15','Stage validé'],
+ ['Maya T.','20','Commerce (BAC)','Montreuil','RDV mardi 16h'],
+ ['Liam G.','18','Restauration (CAP)','Levallois','Dispo immédiate'],
+];
+document.getElementById('stu-rows').innerHTML=STU.map(r=>`
+ <div class="row" style="grid-template-columns:24% 8% 24% 20% 24%;">
+   <span class="cell-strong">${r[0]}</span>
+   <span style="color:var(--teal);font-weight:700">${r[1]}</span>
+   <span class="dim">${r[2]}</span>
+   <span class="dim">${r[3]}</span>
+   <span style="color:var(--gold);font-weight:600">${r[4]}</span>
+ </div>`).join('');
+
+// BATTLE APPELS
+const BAT=[['Lucas M.',38],['Karim D.',31],['Sarah B.',27],['Nadia R.',22],['Hugo P.',16],['Léa F.',8]];
+const maxB=Math.max(...BAT.map(b=>b[1]));
+document.getElementById('battle').innerHTML=BAT.map((b,i)=>`
+ <div class="brow">
+   <span>${commCell(b[0])}</span>
+   <span class="bar"><i style="width:${Math.round(b[1]/maxB*100)}%"></i></span>
+   <span class="bnum">${b[1]}</span>
+ </div>`).join('');
+
+// OBJECTIFS
+const OBJ=[['Lucas M.',8,8],['Karim D.',6,5],['Sarah B.',6,6],['Nadia R.',4,3],['Hugo P.',4,2],['Léa F.',4,4]];
+document.getElementById('obj').innerHTML=OBJ.map(o=>{const pc=Math.round(o[2]/o[1]*100);const col=pc>=100?'var(--green)':pc>=60?'var(--gold)':'var(--red)';return`
+ <div class="gauge">
+   <div class="nm">${o[0]}</div>
+   <div class="pc">${o[2]}<span style="font-size:13px;color:var(--mut)">/${o[1]}</span></div>
+   <div class="gbar"><i style="width:${Math.min(pc,100)}%;background:${col}"></i></div>
+ </div>`;}).join('');
+
+// MATCHING
+const MATCH=[
+ {ent:'Maison Lefort',entMeta:'Paris 11 · 2 postes Commerce',stu:'Aminata D.',stuMeta:'19 ans · Commerce (BAC) · Paris 20',score:94,cls:'hi',why:['Formation Commerce ✓','🚆 22 min','Âge recherché ✓','Dispo : RDV jeudi']},
+ {ent:'Burger Avenue',entMeta:'Créteil · 3 postes Restauration',stu:'Yanis K.',stuMeta:'21 ans · Vente (BTS) · Créteil',score:88,cls:'hi',why:['Même ville 🚆 9 min','Profil polyvalent ✓','Dispo : stage en cours']},
+ {ent:'Optic Vision',entMeta:'Nanterre · 1 poste Commerce',stu:'Inès B.',stuMeta:'22 ans · Vente (BTS) · Nanterre',score:90,cls:'hi',why:['Formation Vente ✓','🚆 12 min','Dispo immédiate ✓']},
+ {ent:'Sushi Kané',entMeta:'Paris 15 · 2 postes Restauration',stu:'Noah L.',stuMeta:'19 ans · Restauration (CAP) · Paris 15',score:86,cls:'md',why:['Formation Restauration ✓','Même arrondissement 🚆 7 min','Stage validé ✓']},
+];
+document.getElementById('mcards').innerHTML=MATCH.map(m=>`
+ <div class="mcard">
+   <div class="mtop">
+     <div class="side ent"><div class="lbl">🏢 Entreprise</div><div class="nm">${m.ent}</div><div class="meta">${m.entMeta}</div></div>
+     <div class="link"><div class="score ${m.cls}"><span>${m.score}</span></div><div class="arrow">⇄</div></div>
+     <div class="side stu"><div class="lbl">🎓 Étudiant</div><div class="nm">${m.stu}</div><div class="meta">${m.stuMeta}</div></div>
+   </div>
+   <div class="mwhy">${m.why.map(w=>`<span class="why ${w.includes('🚆')?'tr':''}">${w}</span>`).join('')}</div>
+ </div>`).join('');
+
+// TAB TOGGLE via hash
+function setView(){const h=location.hash.replace('#','')||'live';
+  const live=h!=='match';
+  document.getElementById('view-live').classList.toggle('hide',!live);
+  document.getElementById('view-match').classList.toggle('hide',live);
+  document.getElementById('tab-live').classList.toggle('on',live);
+  document.getElementById('tab-match').classList.toggle('on',!live);}
+setView();window.addEventListener('hashchange',setView);
+</script>
+</body></html>

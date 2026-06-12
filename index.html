@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dany Phoulevang — Directeur Commercial & Automatisation IA</title>
+<meta name="description" content="Portfolio live : un dirigeant commercial qui construit ses propres outils IA. Cockpit de pilotage, matching IA, assistant conversationnel.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Arial,sans-serif;}
+:root{--bg:#0a1120;--card:#111e38;--card2:#16264a;--line:#22345c;--ink:#e8eefc;--mut:#8aa0c8;--gold:#e2b857;--teal:#2dd4bf;--blue:#5b8bf0;--green:#34d399;}
+html{scroll-behavior:smooth;}
+body{background:radial-gradient(1100px 650px at 80% -10%,#16264a 0%,var(--bg) 60%);color:var(--ink);line-height:1.55;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
+.demo-bar{background:rgba(226,184,87,.12);border-bottom:1px solid rgba(226,184,87,.3);color:var(--gold);font-size:13px;text-align:center;padding:7px 12px;font-weight:600;}
+/* HERO */
+header{padding:64px 0 40px;}
+.kicker{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;}
+h1{font-size:clamp(34px,6vw,60px);font-weight:900;line-height:1.05;margin:14px 0 6px;letter-spacing:-.5px;}
+.role{font-size:clamp(15px,2.4vw,20px);color:var(--mut);font-weight:600;}
+.lead{font-size:clamp(18px,2.7vw,26px);margin:26px 0 8px;font-weight:700;max-width:820px;}
+.lead b{color:var(--teal);}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
+.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:700;padding:14px 22px;border-radius:12px;text-decoration:none;transition:transform .15s,box-shadow .15s;}
+.btn:hover{transform:translateY(-2px);}
+.btn.p{background:linear-gradient(135deg,var(--gold),#caa23f);color:#0a1120;box-shadow:0 10px 30px rgba(226,184,87,.25);}
+.btn.s{background:var(--card2);color:#fff;border:1px solid var(--line);}
+.stats{display:flex;flex-wrap:wrap;gap:30px;margin-top:42px;padding-top:26px;border-top:1px solid var(--line);}
+.stat b{font-size:30px;font-weight:900;color:#fff;display:block;}
+.stat span{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;}
+/* SECTION */
+section{padding:38px 0;}
+.sh{font-size:13px;color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.st{font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:8px;}
+.sp{color:var(--mut);max-width:760px;margin-bottom:26px;}
+/* live embed */
+.live-box{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0a1120;box-shadow:0 30px 80px rgba(0,0,0,.4);}
+.live-head{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:8px;}
+.dots{display:flex;gap:7px;}.dots i{width:11px;height:11px;border-radius:50%;display:block;}
+.dots i:nth-child(1){background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
+.live-tabs{display:flex;gap:8px;}
+.live-tabs a{font-size:13px;font-weight:600;color:var(--mut);text-decoration:none;padding:6px 13px;border-radius:8px;border:1px solid var(--line);background:var(--card2);}
+.frame-scroll{overflow:auto;-webkit-overflow-scrolling:touch;}
+iframe{width:1920px;height:1180px;border:0;display:block;transform-origin:top left;}
+.hint{font-size:12px;color:var(--mut);margin-top:10px;text-align:center;}
+/* tool grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.tool{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+.tool img{width:100%;display:block;border-bottom:1px solid var(--line);background:#0a1120;}
+.tool .tx{padding:16px 18px;}
+.tool h3{font-size:17px;font-weight:800;margin-bottom:6px;}
+.tool p{font-size:14px;color:var(--mut);}
+.tool .tag{display:inline-block;font-size:11px;font-weight:700;color:var(--teal);background:rgba(45,212,191,.12);padding:3px 9px;border-radius:20px;margin-bottom:10px;}
+/* footer */
+footer{padding:46px 0 60px;border-top:1px solid var(--line);margin-top:20px;text-align:center;}
+footer .big{font-size:clamp(20px,3vw,28px);font-weight:800;margin-bottom:8px;}
+footer a.mail{color:var(--gold);text-decoration:none;font-weight:700;font-size:18px;}
+.muted{color:var(--mut);font-size:13px;margin-top:18px;}
+@media(max-width:760px){iframe{transform:scale(.34);} .frame-scroll{height:430px;}}
+@media(min-width:761px){.frame-scroll{height:600px;} iframe{transform:scale(.58);} }
+@media(min-width:1100px){iframe{transform:scale(.60);}}
+</style></head>
+<body>
+<div class="demo-bar">⚠️ Démonstration — interface réelle alimentée par des <b>&nbsp;données fictives&nbsp;</b> (aucune donnée personnelle).</div>
+
+<div class="wrap">
+  <header>
+    <div class="kicker">Portfolio live</div>
+    <h1>Dany Phoulevang</h1>
+    <div class="role">Directeur Opérationnel &amp; Commercial · Développement, RevOps &amp; Automatisation IA</div>
+    <div class="lead">Je ne vous dis pas que je construis des outils IA.<br><b>Je vous les fais essayer.</b></div>
+    <div class="cta">
+      <a class="btn p" href="#cockpit">▶ Explorer le cockpit (live)</a>
+      <a class="btn s" href="CV_Dany_Phoulevang.pdf" download>⬇ Télécharger mon CV</a>
+      <a class="btn s" href="mailto:phoulevang.dany@gmail.com">✉ Me contacter</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>400+</b><span>contrats signés</span></div>
+      <div class="stat"><b>12</b><span>commerciaux pilotés</span></div>
+      <div class="stat"><b>+30%</b><span>croissance ventes</span></div>
+      <div class="stat"><b>3,5 M€</b><span>projet valorisé</span></div>
+    </div>
+  </header>
+
+  <section id="cockpit">
+    <div class="sh">Outil n°1 · en direct</div>
+    <div class="st">Cockpit commercial « Sales Intelligence »</div>
+    <p class="sp">Un mur de pilotage que j'ai conçu et fait développer : entreprises avec un besoin, activité de chaque commercial, étudiants prêts à placer, objectifs du mois — et un <b>moteur de matching IA</b> qui rapproche automatiquement chaque entreprise du candidat le plus compatible. <b>Cliquez les onglets, c'est interactif.</b></p>
+    <div class="live-box">
+      <div class="live-head">
+        <div class="dots"><i></i><i></i><i></i></div>
+        <div class="live-tabs">
+          <a href="cockpit.html#live" target="cockpitFrame">▦ LIVE</a>
+          <a href="cockpit.html#match" target="cockpitFrame">🤝 Matching IA</a>
+          <a href="cockpit.html" target="_blank">⤢ Plein écran</a>
+        </div>
+      </div>
+      <div class="frame-scroll">
+        <iframe name="cockpitFrame" src="cockpit.html#live" title="Cockpit Sales Intelligence"></iframe>
+      </div>
+    </div>
+    <div class="hint">💡 Sur mobile : faites défiler dans le cadre, ou ouvrez en plein écran. Expérience optimale sur ordinateur.</div>
+  </section>
+
+  <section>
+    <div class="sh">Les autres outils</div>
+    <div class="st">Conçus, développés, déployés en production</div>
+    <p class="sp">Tous bâtis en développement assisté par IA (Claude Code). Captures de démo ci-dessous.</p>
+    <div class="grid">
+      <div class="tool">
+        <img src="assets/demo_match.png" alt="Matching IA">
+        <div class="tx"><span class="tag">Intelligence artificielle</span><h3>Matching IA entreprise ⇄ étudiant</h3><p>L'algorithme note chaque rapprochement sur la formation, le temps de trajet réel et le profil. Le commercial confirme, c'est tout.</p></div>
+      </div>
+      <div class="tool">
+        <img src="assets/s2_telegram.png" alt="Assistant Telegram">
+        <div class="tx"><span class="tag">Assistant LLM</span><h3>Assistant IA sur Telegram</h3><p>Brief commercial du matin, alertes sur les dossiers à risque, lecture des mails, pilotage du CRM — à l'écrit comme à la voix.</p></div>
+      </div>
+      <div class="tool">
+        <img src="assets/s5_saas_safe.png" alt="Plateforme SaaS">
+        <div class="tx"><span class="tag">Produit / SaaS</span><h3>Plateforme SaaS métier</h3><p>Cahier des charges rédigé et équipe d'ingénieurs pilotée pour bâtir une plateforme complète : finances, suivi, conformité.</p></div>
+      </div>
+      <div class="tool">
+        <img src="assets/demo_live.png" alt="Reporting KPI">
+        <div class="tx"><span class="tag">RevOps · Automatisation</span><h3>Reporting KPI 100% automatisé</h3><p>KPI consolidés en temps réel et diffusés automatiquement sur Teams, Telegram et e-mail. Fini la saisie manuelle.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="big">Je vends, je structure, j'industrialise.</div>
+    <div class="role" style="margin-bottom:18px">Disponible pour un poste de direction — Commercial · Opérations · RevOps · Partenariats</div>
+    <a class="mail" href="mailto:phoulevang.dany@gmail.com">phoulevang.dany@gmail.com</a> &nbsp;·&nbsp; <span style="color:var(--mut)">06 27 87 29 54</span>
+    <div style="margin-top:18px"><a class="btn p" href="CV_Dany_Phoulevang.pdf" download>⬇ Télécharger mon CV (PDF)</a></div>
+    <div class="muted">Réalisé en développement assisté par IA · Données de démonstration fictives · © 2026 Dany Phoulevang</div>
+  </footer>
+</div>
+</body></html>
