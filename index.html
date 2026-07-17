@@ -1,144 +1,394 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
+<html lang="fr">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dany Phoulevang — Directeur Commercial & Automatisation IA</title>
-<meta name="description" content="Portfolio live : un dirigeant commercial qui construit ses propres outils IA. Cockpit de pilotage, matching IA, assistant conversationnel.">
+<title>Dany Phoulevang — Direction Commerciale &amp; Opérations</title>
+<meta name="description" content="Directeur commercial et opérationnel. Je vends, je structure, j'industrialise : 400+ contrats, équipes pilotées à la performance, outils métier déployés en production.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://phoulevangdany-sketch.github.io/">
-<meta property="og:title" content="Dany Phoulevang — Directeur Commercial & Automatisation IA">
-<meta property="og:description" content="Je ne vous dis pas que je construis des outils IA : je vous les fais essayer. Cockpit commercial, matching IA, assistants — en direct.">
+<meta property="og:title" content="Dany Phoulevang — Direction Commerciale &amp; Opérations">
+<meta property="og:description" content="Je vends, je structure, j'industrialise. Parcours, réalisations et outils en démonstration.">
 <meta property="og:image" content="https://phoulevangdany-sketch.github.io/assets/og-cover.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Arial,sans-serif;}
-:root{--bg:#0a1120;--card:#111e38;--card2:#16264a;--line:#22345c;--ink:#e8eefc;--mut:#8aa0c8;--gold:#e2b857;--teal:#2dd4bf;--blue:#5b8bf0;--green:#34d399;}
+:root{
+  --paper:#f7f4ed;
+  --paper2:#efeadf;
+  --ink:#1c1a16;
+  --ink2:#4c473e;
+  --mut:#7c7568;
+  --line:#d9d2c3;
+  --acc:#8a3324;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:radial-gradient(1100px 650px at 80% -10%,#16264a 0%,var(--bg) 60%);color:var(--ink);line-height:1.55;}
-.wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
-.demo-bar{background:rgba(226,184,87,.12);border-bottom:1px solid rgba(226,184,87,.3);color:var(--gold);font-size:13px;text-align:center;padding:7px 12px;font-weight:600;}
-/* HERO */
-header{padding:64px 0 40px;}
-.kicker{color:var(--gold);font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;}
-h1{font-size:clamp(34px,6vw,60px);font-weight:900;line-height:1.05;margin:14px 0 6px;letter-spacing:-.5px;}
-.role{font-size:clamp(15px,2.4vw,20px);color:var(--mut);font-weight:600;}
-.lead{font-size:clamp(18px,2.7vw,26px);margin:26px 0 8px;font-weight:700;max-width:820px;}
-.lead b{color:var(--teal);}
-.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
-.btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:700;padding:14px 22px;border-radius:12px;text-decoration:none;transition:transform .15s,box-shadow .15s;}
-.btn:hover{transform:translateY(-2px);}
-.btn.p{background:linear-gradient(135deg,var(--gold),#caa23f);color:#0a1120;box-shadow:0 10px 30px rgba(226,184,87,.25);}
-.btn.s{background:var(--card2);color:#fff;border:1px solid var(--line);}
-.stats{display:flex;flex-wrap:wrap;gap:30px;margin-top:42px;padding-top:26px;border-top:1px solid var(--line);}
-.stat b{font-size:30px;font-weight:900;color:#fff;display:block;}
-.stat span{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.6px;}
-/* SECTION */
-section{padding:38px 0;}
-.sh{font-size:13px;color:var(--gold);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
-.st{font-size:clamp(24px,4vw,34px);font-weight:800;margin-bottom:8px;}
-.sp{color:var(--mut);max-width:760px;margin-bottom:26px;}
-/* live embed */
-.live-box{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0a1120;box-shadow:0 30px 80px rgba(0,0,0,.4);}
-.live-head{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;background:var(--card);border-bottom:1px solid var(--line);flex-wrap:wrap;gap:8px;}
-.dots{display:flex;gap:7px;}.dots i{width:11px;height:11px;border-radius:50%;display:block;}
-.dots i:nth-child(1){background:#ff5f57}.dots i:nth-child(2){background:#febc2e}.dots i:nth-child(3){background:#28c840}
-.live-tabs{display:flex;gap:8px;}
-.live-tabs a{font-size:13px;font-weight:600;color:var(--mut);text-decoration:none;padding:6px 13px;border-radius:8px;border:1px solid var(--line);background:var(--card2);}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Instrument Sans',Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px;}
+::selection{background:var(--acc);color:var(--paper);}
+
+/* ---------- top bar ---------- */
+nav{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:26px 0 22px;border-bottom:1px solid var(--line);
+}
+nav .brand{font-family:'Fraunces',serif;font-weight:600;font-size:18px;letter-spacing:.2px;}
+nav .links{display:flex;gap:26px;font-size:13.5px;}
+nav .links a{color:var(--ink2);text-decoration:none;letter-spacing:.4px;}
+nav .links a:hover{color:var(--acc);}
+@media(max-width:640px){nav .links{display:none;}}
+
+/* ---------- hero ---------- */
+header{padding:88px 0 0;}
+.kicker{
+  font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--acc);
+}
+h1{
+  font-family:'Fraunces',serif;font-optical-sizing:auto;font-weight:500;
+  font-size:clamp(46px,8vw,86px);line-height:1.02;letter-spacing:-1px;
+  margin:20px 0 26px;
+}
+h1 em{font-style:italic;font-weight:400;}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:56px;align-items:end;padding-bottom:64px;}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:30px;}}
+.hero-lede{font-size:clamp(18px,2.4vw,21px);color:var(--ink2);max-width:560px;}
+.hero-lede b{color:var(--ink);font-weight:600;}
+.hero-side{font-size:14.5px;color:var(--mut);border-left:1px solid var(--line);padding-left:24px;}
+.hero-side .row{margin-bottom:14px;}
+.hero-side .lab{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);display:block;margin-bottom:2px;}
+.hero-side a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);}
+.hero-side a:hover{border-color:var(--acc);color:var(--acc);}
+
+/* ---------- stats ---------- */
+.stats{
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(5,1fr);
+}
+.stat{padding:30px 18px 26px;border-right:1px solid var(--line);}
+.stat:last-child{border-right:none;}
+.stat b{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,3.6vw,42px);display:block;line-height:1;}
+.stat span{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mut);display:block;margin-top:9px;}
+@media(max-width:820px){
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .stat{border-bottom:1px solid var(--line);}
+  .stat:nth-child(5){grid-column:1/-1;border-bottom:none;}
+}
+
+/* ---------- sections ---------- */
+section{padding:84px 0 0;}
+.shead{display:flex;align-items:baseline;gap:18px;margin-bottom:44px;}
+.snum{font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--acc);}
+.stitle{
+  font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,4.4vw,42px);letter-spacing:-.5px;line-height:1.1;
+}
+.sintro{color:var(--ink2);max-width:640px;margin:-26px 0 44px;font-size:16.5px;}
+
+/* ---------- parcours ---------- */
+.tl{border-top:1px solid var(--ink);}
+.tl-row{
+  display:grid;grid-template-columns:150px 1fr 300px;gap:26px;
+  padding:26px 0;border-bottom:1px solid var(--line);
+}
+@media(max-width:820px){.tl-row{grid-template-columns:1fr;gap:6px;padding:22px 0;}}
+.tl-date{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);padding-top:5px;}
+.tl-role{font-family:'Fraunces',serif;font-weight:500;font-size:21px;line-height:1.25;}
+.tl-org{font-size:14px;color:var(--acc);font-weight:600;margin-top:3px;}
+.tl-desc{font-size:14.5px;color:var(--ink2);padding-top:4px;}
+
+/* ---------- réalisations ---------- */
+.case{
+  display:grid;grid-template-columns:64px 1fr 260px;gap:30px;
+  padding:34px 0;border-bottom:1px solid var(--line);
+}
+.case:first-of-type{border-top:1px solid var(--ink);}
+@media(max-width:820px){.case{grid-template-columns:1fr;gap:10px;}}
+.case-num{font-family:'Fraunces',serif;font-style:italic;font-size:26px;color:var(--line);line-height:1;padding-top:4px;}
+.case h3{font-family:'Fraunces',serif;font-weight:500;font-size:23px;letter-spacing:-.3px;margin-bottom:10px;line-height:1.2;}
+.case p{font-size:15.5px;color:var(--ink2);max-width:560px;}
+.case .res{padding-top:6px;}
+.case .res .lab{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--acc);display:block;margin-bottom:6px;}
+.case .res .val{font-size:14.5px;color:var(--ink);}
+.case a{color:var(--acc);text-decoration:none;border-bottom:1px solid var(--line);}
+.case a:hover{border-color:var(--acc);}
+
+/* ---------- demo ---------- */
+.demo-note{
+  font-size:13px;color:var(--mut);margin-bottom:18px;
+}
+.demo-note b{color:var(--ink2);}
+.demo-frame{
+  border:1px solid var(--ink);background:#101725;
+  box-shadow:14px 14px 0 var(--paper2);
+}
+.demo-head{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  padding:12px 18px;background:var(--paper);border-bottom:1px solid var(--ink);
+}
+.demo-head .cap{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink2);}
+.demo-tabs{display:flex;gap:10px;}
+.demo-tabs a{
+  font-size:12.5px;font-weight:600;color:var(--ink);text-decoration:none;
+  padding:6px 14px;border:1px solid var(--line);letter-spacing:.4px;background:var(--paper);
+}
+.demo-tabs a:hover{border-color:var(--acc);color:var(--acc);}
 .frame-scroll{overflow:auto;-webkit-overflow-scrolling:touch;}
 iframe{width:1920px;height:1180px;border:0;display:block;transform-origin:top left;}
-.hint{font-size:12px;color:var(--mut);margin-top:10px;text-align:center;}
-/* tool grid */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
-.tool{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
-.tool img{width:100%;display:block;border-bottom:1px solid var(--line);background:#0a1120;}
-.tool .tx{padding:16px 18px;}
-.tool h3{font-size:17px;font-weight:800;margin-bottom:6px;}
-.tool p{font-size:14px;color:var(--mut);}
-.tool .tag{display:inline-block;font-size:11px;font-weight:700;color:var(--teal);background:rgba(45,212,191,.12);padding:3px 9px;border-radius:20px;margin-bottom:10px;}
-/* footer */
-footer{padding:46px 0 60px;border-top:1px solid var(--line);margin-top:20px;text-align:center;}
-footer .big{font-size:clamp(20px,3vw,28px);font-weight:800;margin-bottom:8px;}
-footer a.mail{color:var(--gold);text-decoration:none;font-weight:700;font-size:18px;}
-.muted{color:var(--mut);font-size:13px;margin-top:18px;}
-@media(max-width:760px){iframe{transform:scale(.34);} .frame-scroll{height:430px;}}
-@media(min-width:761px){.frame-scroll{height:600px;} iframe{transform:scale(.58);} }
-@media(min-width:1100px){iframe{transform:scale(.60);}}
-</style></head>
+@media(max-width:760px){iframe{transform:scale(.34);} .frame-scroll{height:420px;}}
+@media(min-width:761px){.frame-scroll{height:590px;} iframe{transform:scale(.55);}}
+@media(min-width:1100px){iframe{transform:scale(.55);}}
+.hint{font-size:12.5px;color:var(--mut);margin-top:14px;}
+
+/* ---------- galerie outils ---------- */
+.tools{display:grid;grid-template-columns:1fr 1fr;gap:34px;border-top:1px solid var(--ink);padding-top:38px;}
+@media(max-width:760px){.tools{grid-template-columns:1fr;}}
+.tool img{width:100%;display:block;border:1px solid var(--line);filter:saturate(.9);}
+.tool h4{font-family:'Fraunces',serif;font-weight:500;font-size:19px;margin:14px 0 5px;}
+.tool p{font-size:14.5px;color:var(--ink2);}
+
+/* ---------- footer ---------- */
+footer{margin-top:100px;background:var(--ink);color:var(--paper);}
+footer .inner{max-width:1060px;margin:0 auto;padding:78px 28px 60px;}
+footer .big{
+  font-family:'Fraunces',serif;font-weight:500;font-size:clamp(34px,6vw,60px);letter-spacing:-.8px;line-height:1.05;margin-bottom:22px;
+}
+footer .big em{font-style:italic;color:#d9a08f;}
+footer .sub{color:#b9b2a4;font-size:16px;max-width:560px;margin-bottom:38px;}
+.f-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
+.btn{
+  display:inline-block;font-size:14px;font-weight:600;letter-spacing:.6px;
+  padding:15px 28px;text-decoration:none;transition:background .15s,color .15s;
+}
+.btn.p{background:var(--paper);color:var(--ink);}
+.btn.p:hover{background:#d9a08f;}
+.btn.s{color:var(--paper);border:1px solid #4c473e;}
+.btn.s:hover{border-color:var(--paper);}
+.f-meta{margin-top:56px;padding-top:22px;border-top:1px solid #3a362e;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#8d8676;}
+.f-meta a{color:#b9b2a4;text-decoration:none;}
+
+/* reveal */
+@media(prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(14px);animation:up .7s ease forwards;}
+  @keyframes up{to{opacity:1;transform:none;}}
+  .d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}
+}
+</style>
+</head>
 <body>
-<div class="demo-bar">⚠️ Démonstration — interface réelle alimentée par des <b>&nbsp;données fictives&nbsp;</b> (aucune donnée personnelle).</div>
 
 <div class="wrap">
-  <header>
-    <div class="kicker">Portfolio live</div>
-    <h1>Dany Phoulevang</h1>
-    <div class="role">Directeur Opérationnel &amp; Commercial · Développement, RevOps &amp; Automatisation IA</div>
-    <div class="lead">Je ne vous dis pas que je construis des outils IA.<br><b>Je vous les fais essayer.</b></div>
-    <div class="cta">
-      <a class="btn p" href="#cockpit">▶ Explorer le cockpit (live)</a>
-      <a class="btn s" href="CV_Dany_Phoulevang.pdf" download>⬇ Télécharger mon CV</a>
-      <a class="btn s" href="mailto:phoulevang.dany@gmail.com">✉ Me contacter</a>
+  <nav>
+    <div class="brand">Dany Phoulevang</div>
+    <div class="links">
+      <a href="#parcours">Parcours</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#demo">Démonstration</a>
+      <a href="CV_Dany_Phoulevang.pdf">CV (PDF)</a>
+      <a href="mailto:phoulevang.dany@gmail.com">Contact</a>
     </div>
-    <div class="stats">
-      <div class="stat"><b>400+</b><span>contrats signés</span></div>
-      <div class="stat"><b>12</b><span>commerciaux pilotés</span></div>
-      <div class="stat"><b>+30%</b><span>croissance ventes</span></div>
-      <div class="stat"><b>3,5 M€</b><span>projet valorisé</span></div>
+  </nav>
+
+  <header>
+    <div class="kicker reveal">Direction commerciale · Opérations · RevOps</div>
+    <h1 class="reveal d1">Je vends, je structure,<br><em>j'industrialise.</em></h1>
+    <div class="hero-grid">
+      <p class="hero-lede reveal d2">
+        Quinze ans d'exigence commerciale — du luxe (Rolex, LVMH) aux contrats-cadres de plusieurs millions d'euros —
+        avec une particularité : <b>je construis moi-même les outils qui font performer mes équipes</b>.
+        CRM, pilotage temps réel, reporting automatisé, assistants métier : conçus, déployés, utilisés chaque jour en production.
+      </p>
+      <div class="hero-side reveal d3">
+        <div class="row"><span class="lab">Basé à</span>Île-de-France · Permis B</div>
+        <div class="row"><span class="lab">Recherche</span>Poste de direction — Commercial, Opérations, RevOps, Partenariats</div>
+        <div class="row"><span class="lab">Contact</span><a href="mailto:phoulevang.dany@gmail.com">phoulevang.dany@gmail.com</a><br>06 27 87 29 54</div>
+      </div>
     </div>
   </header>
 
-  <section id="cockpit">
-    <div class="sh">Outil n°1 · en direct</div>
-    <div class="st">Cockpit commercial « Sales Intelligence »</div>
-    <p class="sp">Un mur de pilotage que j'ai conçu et fait développer : entreprises avec un besoin, activité de chaque commercial, étudiants prêts à placer, objectifs du mois — et un <b>moteur de matching IA</b> qui rapproche automatiquement chaque entreprise du candidat le plus compatible. <b>Cliquez les onglets, c'est interactif.</b></p>
-    <div class="live-box">
-      <div class="live-head">
-        <div class="dots"><i></i><i></i><i></i></div>
-        <div class="live-tabs">
-          <a href="cockpit.html#live" target="cockpitFrame">▦ LIVE</a>
-          <a href="cockpit.html#match" target="cockpitFrame">🤝 Matching IA</a>
-          <a href="cockpit.html" target="_blank">⤢ Plein écran</a>
+  <div class="stats">
+    <div class="stat"><b>400+</b><span>contrats signés</span></div>
+    <div class="stat"><b>12</b><span>commerciaux pilotés</span></div>
+    <div class="stat"><b>+30 %</b><span>croissance ventes</span></div>
+    <div class="stat"><b>3,5 M€</b><span>projet valorisé</span></div>
+    <div class="stat"><b>20+</b><span>outils en production</span></div>
+  </div>
+
+  <section id="parcours">
+    <div class="shead"><span class="snum">01</span><h2 class="stitle">Parcours</h2></div>
+    <div class="tl">
+      <div class="tl-row">
+        <div class="tl-date">2024 — auj.</div>
+        <div>
+          <div class="tl-role">Directeur Conseil — Développement commercial &amp; Automatisation</div>
+          <div class="tl-org">Otomeo (ex-CPL Consulting) · otomeo.com</div>
+        </div>
+        <div class="tl-desc">Pilotage d'une équipe de 12 commerciaux, 400+ contrats sécurisés. Conseil en structuration, conformité formation (OPCO, DRIEETS) et déploiement d'automatisations métier pour PME.</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">2024 — 2025</div>
+        <div>
+          <div class="tl-role">Directeur Commercial &amp; Mission AMO / CEE</div>
+          <div class="tl-org">Helios Green Engineering</div>
+        </div>
+        <div class="tl-desc">Contrats-cadres COVÉA &amp; EKIDOM (plusieurs M€), coordination DALKIA, IDEX, ENGIE. Projet RCU : 37 bâtiments, 444 GWhc, valorisation estimée 3,5 M€.</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">2016 — 2023</div>
+        <div>
+          <div class="tl-role">Responsable Boutique — Horlogerie de prestige</div>
+          <div class="tl-org">Royal Quartz (Galeries Lafayette) · Aéroports de Paris</div>
+        </div>
+        <div class="tl-desc">Revendeur officiel Rolex, Cartier, Omega, Jaeger-LeCoultre. Management, stocks, reporting siège. Tickets à 6 chiffres, +30 % de ventes sur la période.</div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-date">2013 — 2016</div>
+        <div>
+          <div class="tl-role">Brand Ambassador — Travel Retail</div>
+          <div class="tl-org">Moët Hennessy / LVMH · CDG &amp; Orly</div>
+        </div>
+        <div class="tl-desc">Représentation de Moët &amp; Chandon, Dom Pérignon, Veuve Clicquot. Lancements produits et animation de pop-up stores, clientèle internationale.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="realisations">
+    <div class="shead"><span class="snum">02</span><h2 class="stitle">Réalisations</h2></div>
+    <p class="sintro">Une sélection de ce que j'ai conçu et livré ces 24 derniers mois — chaque outil tourne réellement en production, au service du chiffre.</p>
+
+    <div class="case">
+      <div class="case-num">Ⅰ</div>
+      <div>
+        <h3>Cockpit de pilotage commercial &amp; matching intelligent</h3>
+        <p>Un mur de pilotage temps réel : activité de chaque commercial, entreprises en recherche, candidats prêts à placer, objectifs du mois — et un moteur de matching qui rapproche automatiquement chaque besoin du meilleur profil. <a href="#demo">Version de démonstration interactive ci-dessous.</a></p>
+      </div>
+      <div class="res"><span class="lab">Résultat</span><div class="val">Décisions quotidiennes sur données fraîches ; fin des tableaux Excel de suivi.</div></div>
+    </div>
+
+    <div class="case">
+      <div class="case-num">Ⅱ</div>
+      <div>
+        <h3>Assistants métier disponibles 24/7</h3>
+        <p>Des assistants conversationnels en production continue : brief commercial du matin, alertes sur les dossiers à risque, lecture et réponse aux e-mails, interrogation du CRM à la voix comme à l'écrit — sur Telegram et Microsoft 365.</p>
+      </div>
+      <div class="res"><span class="lab">Résultat</span><div class="val">Plusieurs heures de reporting et de recherche d'information économisées chaque semaine.</div></div>
+    </div>
+
+    <div class="case">
+      <div class="case-num">Ⅲ</div>
+      <div>
+        <h3>Plateforme SaaS de gestion — du cahier des charges à la production</h3>
+        <p>Rédaction du cahier des charges complet d'une plateforme de gestion pour organismes de formation (cockpit financier, conformité réglementaire, suivi des dossiers), puis pilotage du développement jusqu'à un produit testé et démontrable — plus de 175 tests automatisés au vert.</p>
+      </div>
+      <div class="res"><span class="lab">Résultat</span><div class="val">Produit démontrable à investisseurs, couvrant financements OPCO, facturation et conformité.</div></div>
+    </div>
+
+    <div class="case">
+      <div class="case-num">Ⅳ</div>
+      <div>
+        <h3>Ingénierie de formation digitalisée de bout en bout</h3>
+        <p>Conception complète d'un parcours de formation professionnelle de 21 heures : 146 livrables (supports, decks animés, guides formateur), 4 jeux pédagogiques en ligne accessibles par QR code, vidéos de passation avec voix off — prêt pour audit qualité Qualiopi.</p>
+      </div>
+      <div class="res"><span class="lab">Résultat</span><div class="val">Un produit de formation commercialisable, conforme et livré clé en main.</div></div>
+    </div>
+
+    <div class="case">
+      <div class="case-num">Ⅴ</div>
+      <div>
+        <h3>Conformité &amp; fiabilisation d'un CFA</h3>
+        <p>Préparation et réussite de contrôles OPCO et DRIEETS : mise en conformité des dossiers (CERFA, référentiels RNCP), génération automatisée de plusieurs milliers de documents de suivi pédagogique, fiabilisation d'une base de 300+ apprenants (dédoublonnage, restauration de données).</p>
+      </div>
+      <div class="res"><span class="lab">Résultat</span><div class="val">Contrôles passés ; l'équipe pilote sur une donnée propre et opposable.</div></div>
+    </div>
+
+    <div class="case">
+      <div class="case-num">Ⅵ</div>
+      <div>
+        <h3>Otomeo — l'automatisation en pilote automatique pour les PME</h3>
+        <p>Fondation d'une activité de conseil en automatisation : audit des tâches répétitives, déploiement d'agents sur les outils existants du client (CRM, mails, Drive) avec validation humaine sur toute action sensible. Positionnement, offre, site et démos sectorielles — <a href="https://otomeo.com" target="_blank" rel="noopener">otomeo.com</a>.</p>
+      </div>
+      <div class="res"><span class="lab">Résultat</span><div class="val">Une offre productisée : audit gratuit, premiers agents déployés en ~7 jours.</div></div>
+    </div>
+
+    <div class="case">
+      <div class="case-num">Ⅶ</div>
+      <div>
+        <h3>Reporting &amp; data commerciale, zéro saisie</h3>
+        <p>KPI consolidés en temps réel et diffusés automatiquement sur Teams, Telegram et e-mail. En parallèle : constitution d'une base de prospection de 1 200 entreprises et 2 000 dirigeants d'Île-de-France à partir d'API publiques gratuites.</p>
+      </div>
+      <div class="res"><span class="lab">Résultat</span><div class="val">Fin de la consolidation manuelle hebdomadaire ; des chiffres fiables, à l'heure, chaque jour.</div></div>
+    </div>
+  </section>
+
+  <section id="demo">
+    <div class="shead"><span class="snum">03</span><h2 class="stitle">Démonstration interactive</h2></div>
+    <p class="demo-note"><b>Extrait du cockpit commercial</b> — interface réelle, alimentée par des <b>données fictives</b> (aucune donnée personnelle). Cliquez les onglets, tout est manipulable.</p>
+    <div class="demo-frame">
+      <div class="demo-head">
+        <span class="cap">Cockpit · Sales Intelligence</span>
+        <div class="demo-tabs">
+          <a href="cockpit.html#live" target="cockpitFrame">Vue live</a>
+          <a href="cockpit.html#match" target="cockpitFrame">Matching</a>
+          <a href="cockpit.html" target="_blank">Plein écran ↗</a>
         </div>
       </div>
       <div class="frame-scroll">
         <iframe name="cockpitFrame" src="cockpit.html#live" title="Cockpit Sales Intelligence"></iframe>
       </div>
     </div>
-    <div class="hint">💡 Sur mobile : faites défiler dans le cadre, ou ouvrez en plein écran. Expérience optimale sur ordinateur.</div>
-  </section>
+    <p class="hint">Sur mobile : faites défiler dans le cadre ou ouvrez en plein écran. Expérience optimale sur ordinateur.</p>
 
-  <section>
-    <div class="sh">Les autres outils</div>
-    <div class="st">Conçus, développés, déployés en production</div>
-    <p class="sp">Tous bâtis en développement assisté par IA (Claude Code). Captures de démo ci-dessous.</p>
-    <div class="grid">
+    <div class="tools" style="margin-top:64px">
       <div class="tool">
-        <img src="assets/demo_match.png" alt="Matching IA">
-        <div class="tx"><span class="tag">Intelligence artificielle</span><h3>Matching IA entreprise ⇄ étudiant</h3><p>L'algorithme note chaque rapprochement sur la formation, le temps de trajet réel et le profil. Le commercial confirme, c'est tout.</p></div>
+        <img src="assets/demo_match.png" alt="Moteur de matching" loading="lazy">
+        <h4>Moteur de matching entreprise ⇄ candidat</h4>
+        <p>Chaque rapprochement est noté sur la formation, le temps de trajet réel et le profil. Le commercial confirme, c'est tout.</p>
       </div>
       <div class="tool">
-        <img src="assets/s2_telegram.png" alt="Assistant Telegram">
-        <div class="tx"><span class="tag">Assistant LLM</span><h3>Assistant IA sur Telegram</h3><p>Brief commercial du matin, alertes sur les dossiers à risque, lecture des mails, pilotage du CRM — à l'écrit comme à la voix.</p></div>
+        <img src="assets/s2_telegram.png" alt="Assistant conversationnel" loading="lazy">
+        <h4>Assistant de direction sur Telegram</h4>
+        <p>Brief du matin, alertes dossiers à risque, lecture des mails et pilotage du CRM — à l'écrit comme à la voix.</p>
       </div>
       <div class="tool">
-        <img src="assets/s5_saas_safe.png" alt="Plateforme SaaS">
-        <div class="tx"><span class="tag">Produit / SaaS</span><h3>Plateforme SaaS métier</h3><p>Cahier des charges rédigé et équipe d'ingénieurs pilotée pour bâtir une plateforme complète : finances, suivi, conformité.</p></div>
+        <img src="assets/s5_saas_safe.png" alt="Plateforme SaaS" loading="lazy">
+        <h4>Plateforme SaaS métier</h4>
+        <p>Cockpit financier, suivi des dossiers et conformité : cahier des charges rédigé, développement piloté jusqu'à la démonstration.</p>
       </div>
       <div class="tool">
-        <img src="assets/demo_live.png" alt="Reporting KPI">
-        <div class="tx"><span class="tag">RevOps · Automatisation</span><h3>Reporting KPI 100% automatisé</h3><p>KPI consolidés en temps réel et diffusés automatiquement sur Teams, Telegram et e-mail. Fini la saisie manuelle.</p></div>
+        <img src="assets/demo_live.png" alt="Reporting automatisé" loading="lazy">
+        <h4>Reporting automatisé multi-canal</h4>
+        <p>KPI consolidés en continu, diffusés sur Teams, Telegram et e-mail. Plus personne ne compile de tableau le vendredi soir.</p>
       </div>
     </div>
   </section>
-
-  <footer>
-    <div class="big">Je vends, je structure, j'industrialise.</div>
-    <div class="role" style="margin-bottom:18px">Disponible pour un poste de direction — Commercial · Opérations · RevOps · Partenariats</div>
-    <a class="mail" href="mailto:phoulevang.dany@gmail.com">phoulevang.dany@gmail.com</a> &nbsp;·&nbsp; <span style="color:var(--mut)">06 27 87 29 54</span>
-    <div style="margin-top:18px"><a class="btn p" href="CV_Dany_Phoulevang.pdf" download>⬇ Télécharger mon CV (PDF)</a></div>
-    <div class="muted">Réalisé en développement assisté par IA · Données de démonstration fictives · © 2026 Dany Phoulevang</div>
-  </footer>
 </div>
-</body></html>
+
+<footer>
+  <div class="inner">
+    <div class="big">Et si on en <em>parlait&nbsp;?</em></div>
+    <p class="sub">Disponible pour un poste de direction — Commercial, Opérations, RevOps ou Partenariats — en Île-de-France. Je viens avec mes méthodes, mes outils et l'obsession du résultat.</p>
+    <div class="f-actions">
+      <a class="btn p" href="CV_Dany_Phoulevang.pdf" download>Télécharger mon CV (PDF)</a>
+      <a class="btn s" href="mailto:phoulevang.dany@gmail.com">phoulevang.dany@gmail.com</a>
+      <span style="color:#8d8676;font-size:14px">06 27 87 29 54</span>
+    </div>
+    <div class="f-meta">
+      <span>© 2026 Dany Phoulevang — Île-de-France</span>
+      <span>Démonstrations : données fictives · <a href="https://www.linkedin.com/in/dany-phoulevang-513b791b3/" target="_blank" rel="noopener">LinkedIn</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
